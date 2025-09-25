@@ -26,46 +26,26 @@ namespace NCalcuate {
 			}
 		}
 
-	protected:
-
 	private: System::Windows::Forms::Label^ result;
-	protected:
-
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Button^ arcsin;
-
-
 	private: System::Windows::Forms::Button^ ctg;
-
 	private: System::Windows::Forms::Button^ tg;
-
 	private: System::Windows::Forms::Button^ cos;
-
 	private: System::Windows::Forms::Button^ sin;
-
 	private: System::Windows::Forms::Button^ abs;
-
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TextBox^ count;
 	private: System::Windows::Forms::Button^ log;
-
-
 	private: System::Windows::Forms::Button^ sqrt;
-
 	private: System::Windows::Forms::Button^ ceil;
-
-
-
 	private: System::Windows::Forms::Button^ arctan;
-
 	private: System::Windows::Forms::Button^ arccos;
 	private: System::Windows::Forms::Label^ label2;
-
 	protected:
 		double a;
-
 	private:
 		System::ComponentModel::Container ^components;
 
@@ -92,9 +72,7 @@ namespace NCalcuate {
 			this->arccos = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
-			// 
-			// result
-			// 
+
 			this->result->AutoSize = true;
 			this->result->Font = (gcnew System::Drawing::Font(L"Trebuchet MS", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -104,9 +82,7 @@ namespace NCalcuate {
 			this->result->TabIndex = 30;
 			this->result->Text = L"0";
 			this->result->Click += gcnew System::EventHandler(this, &one_count::label6_Click);
-			// 
-			// label5
-			// 
+
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Trebuchet MS", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -114,10 +90,8 @@ namespace NCalcuate {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(122, 28);
 			this->label5->TabIndex = 29;
-			this->label5->Text = L"Ðåçóëüòàò";
-			// 
-			// arcsin
-			// 
+			this->label5->Text = L"ÃÃ¥Ã§Ã³Ã«Ã¼Ã²Ã Ã²";
+
 			this->arcsin->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->arcsin->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -126,12 +100,10 @@ namespace NCalcuate {
 			this->arcsin->Name = L"arcsin";
 			this->arcsin->Size = System::Drawing::Size(156, 35);
 			this->arcsin->TabIndex = 27;
-			this->arcsin->Text = L"Àðêñèíóñ";
+			this->arcsin->Text = L"Ã€Ã°ÃªÃ±Ã¨Ã­Ã³Ã±";
 			this->arcsin->UseVisualStyleBackColor = false;
 			this->arcsin->Click += gcnew System::EventHandler(this, &one_count::arcsin_cl);
-			// 
-			// ctg
-			// 
+
 			this->ctg->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->ctg->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -140,12 +112,10 @@ namespace NCalcuate {
 			this->ctg->Name = L"ctg";
 			this->ctg->Size = System::Drawing::Size(160, 35);
 			this->ctg->TabIndex = 26;
-			this->ctg->Text = L"Êîòàíãåíñ";
+			this->ctg->Text = L"ÃŠÃ®Ã²Ã Ã­Ã£Ã¥Ã­Ã±";
 			this->ctg->UseVisualStyleBackColor = false;
 			this->ctg->Click += gcnew System::EventHandler(this, &one_count::ctg_cl);
-			// 
-			// tg
-			// 
+
 			this->tg->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->tg->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -154,12 +124,10 @@ namespace NCalcuate {
 			this->tg->Name = L"tg";
 			this->tg->Size = System::Drawing::Size(156, 35);
 			this->tg->TabIndex = 25;
-			this->tg->Text = L"Òàíãåíñ";
+			this->tg->Text = L"Ã’Ã Ã­Ã£Ã¥Ã­Ã±";
 			this->tg->UseVisualStyleBackColor = false;
 			this->tg->Click += gcnew System::EventHandler(this, &one_count::tg_cl);
-			// 
-			// cos
-			// 
+
 			this->cos->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->cos->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -168,12 +136,10 @@ namespace NCalcuate {
 			this->cos->Name = L"cos";
 			this->cos->Size = System::Drawing::Size(160, 35);
 			this->cos->TabIndex = 24;
-			this->cos->Text = L"Êîñèíóñ";
+			this->cos->Text = L"ÃŠÃ®Ã±Ã¨Ã­Ã³Ã±";
 			this->cos->UseVisualStyleBackColor = false;
 			this->cos->Click += gcnew System::EventHandler(this, &one_count::cos_cl);
-			// 
-			// sin
-			// 
+
 			this->sin->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->sin->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -182,12 +148,10 @@ namespace NCalcuate {
 			this->sin->Name = L"sin";
 			this->sin->Size = System::Drawing::Size(156, 35);
 			this->sin->TabIndex = 23;
-			this->sin->Text = L"Ñèíóñ";
+			this->sin->Text = L"Ã‘Ã¨Ã­Ã³Ã±";
 			this->sin->UseVisualStyleBackColor = false;
 			this->sin->Click += gcnew System::EventHandler(this, &one_count::sin_cl);
-			// 
-			// abs
-			// 
+
 			this->abs->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->abs->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -196,12 +160,10 @@ namespace NCalcuate {
 			this->abs->Name = L"abs";
 			this->abs->Size = System::Drawing::Size(160, 35);
 			this->abs->TabIndex = 22;
-			this->abs->Text = L"Ìîäóëü";
+			this->abs->Text = L"ÃŒÃ®Ã¤Ã³Ã«Ã¼";
 			this->abs->UseVisualStyleBackColor = false;
 			this->abs->Click += gcnew System::EventHandler(this, &one_count::abs_cl);
-			// 
-			// label4
-			// 
+
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Trebuchet MS", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -209,10 +171,8 @@ namespace NCalcuate {
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(310, 28);
 			this->label4->TabIndex = 21;
-			this->label4->Text = L"Îïåðàöèè ñ îäíèì ÷èñëîì";
-			// 
-			// label3
-			// 
+			this->label4->Text = L"ÃŽÃ¯Ã¥Ã°Ã Ã¶Ã¨Ã¨ Ã± Ã®Ã¤Ã­Ã¨Ã¬ Ã·Ã¨Ã±Ã«Ã®Ã¬";
+
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Trebuchet MS", 19.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -221,9 +181,7 @@ namespace NCalcuate {
 			this->label3->Size = System::Drawing::Size(175, 42);
 			this->label3->TabIndex = 20;
 			this->label3->Text = L"NCalcuate";
-			// 
-			// label1
-			// 
+
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Trebuchet MS", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -231,18 +189,14 @@ namespace NCalcuate {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(80, 28);
 			this->label1->TabIndex = 17;
-			this->label1->Text = L"×èñëî";
-			// 
-			// count
-			// 
+			this->label1->Text = L"Ã—Ã¨Ã±Ã«Ã®";
+
 			this->count->Location = System::Drawing::Point(29, 155);
 			this->count->Name = L"count";
 			this->count->Size = System::Drawing::Size(321, 22);
 			this->count->TabIndex = 16;
 			this->count->TextChanged += gcnew System::EventHandler(this, &one_count::count_TextChanged);
-			// 
-			// log
-			// 
+
 			this->log->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->log->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -251,12 +205,10 @@ namespace NCalcuate {
 			this->log->Name = L"log";
 			this->log->Size = System::Drawing::Size(156, 35);
 			this->log->TabIndex = 37;
-			this->log->Text = L"Ëîãàðèôì";
+			this->log->Text = L"Ã‹Ã®Ã£Ã Ã°Ã¨Ã´Ã¬";
 			this->log->UseVisualStyleBackColor = false;
 			this->log->Click += gcnew System::EventHandler(this, &one_count::log_cl);
-			// 
-			// sqrt
-			// 
+
 			this->sqrt->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->sqrt->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -265,12 +217,10 @@ namespace NCalcuate {
 			this->sqrt->Name = L"sqrt";
 			this->sqrt->Size = System::Drawing::Size(156, 35);
 			this->sqrt->TabIndex = 36;
-			this->sqrt->Text = L"Êîðåíü";
+			this->sqrt->Text = L"ÃŠÃ®Ã°Ã¥Ã­Ã¼";
 			this->sqrt->UseVisualStyleBackColor = false;
 			this->sqrt->Click += gcnew System::EventHandler(this, &one_count::sqrt_cl);
-			// 
-			// ceil
-			// 
+
 			this->ceil->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->ceil->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -279,12 +229,10 @@ namespace NCalcuate {
 			this->ceil->Name = L"ceil";
 			this->ceil->Size = System::Drawing::Size(156, 35);
 			this->ceil->TabIndex = 35;
-			this->ceil->Text = L"Îêðóãëåíèå";
+			this->ceil->Text = L"ÃŽÃªÃ°Ã³Ã£Ã«Ã¥Ã­Ã¨Ã¥";
 			this->ceil->UseVisualStyleBackColor = false;
 			this->ceil->Click += gcnew System::EventHandler(this, &one_count::ceil_cl);
-			// 
-			// arctan
-			// 
+
 			this->arctan->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->arctan->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -293,12 +241,10 @@ namespace NCalcuate {
 			this->arctan->Name = L"arctan";
 			this->arctan->Size = System::Drawing::Size(156, 35);
 			this->arctan->TabIndex = 33;
-			this->arctan->Text = L"Àðêòàíãåíñ";
+			this->arctan->Text = L"Ã€Ã°ÃªÃ²Ã Ã­Ã£Ã¥Ã­Ã±";
 			this->arctan->UseVisualStyleBackColor = false;
 			this->arctan->Click += gcnew System::EventHandler(this, &one_count::arctan_cl);
-			// 
-			// arccos
-			// 
+
 			this->arccos->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->arccos->Font = (gcnew System::Drawing::Font(L"Nunito SemiBold", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -307,12 +253,10 @@ namespace NCalcuate {
 			this->arccos->Name = L"arccos";
 			this->arccos->Size = System::Drawing::Size(160, 35);
 			this->arccos->TabIndex = 32;
-			this->arccos->Text = L"Àðêêîñèíóñ";
+			this->arccos->Text = L"Ã€Ã°ÃªÃªÃ®Ã±Ã¨Ã­Ã³Ã±";
 			this->arccos->UseVisualStyleBackColor = false;
 			this->arccos->Click += gcnew System::EventHandler(this, &one_count::arccos_cl);
-			// 
-			// label2
-			// 
+
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Trebuchet MS", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
@@ -320,9 +264,7 @@ namespace NCalcuate {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(0, 36);
 			this->label2->TabIndex = 38;
-			// 
-			// one_count
-			// 
+ 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(384, 560);
@@ -419,3 +361,4 @@ private: System::Void log_cl(System::Object^ sender, System::EventArgs^ e) {
 
 };
 }
+
