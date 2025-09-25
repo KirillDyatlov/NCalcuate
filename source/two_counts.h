@@ -41,16 +41,12 @@ namespace NCalcuate {
 	private: System::Windows::Forms::Label^ result;
 	private:
 		System::ComponentModel::Container ^components;
-
 	protected:
 		double a;
 		double b;
 		double c;
 	private: System::Windows::Forms::Button^ button1;
-	protected:
 	private: System::Windows::Forms::Label^ BMI_result;
-	protected:
-
 	protected:
 #pragma region Windows Form Designer generated code
 		void InitializeComponent(void)
@@ -220,3 +216,4 @@ private: System::Void two_counts_Load(System::Object^ sender, System::EventArgs^
 }
 
 // КОММЕНТАРИИ ГОВНОООООООООООООООООООООООО
+
