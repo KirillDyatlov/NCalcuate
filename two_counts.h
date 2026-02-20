@@ -30,10 +30,10 @@ namespace NCalcuate {
 		}
 	private: System::Windows::Forms::TextBox^ one_count;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ two_count;
+
+
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label4;
+
 	private: System::Windows::Forms::Button^ add;
 	private: System::Windows::Forms::Button^ subtract;
 	private: System::Windows::Forms::Button^ divide;
@@ -44,11 +44,16 @@ namespace NCalcuate {
 	private:
 		System::ComponentModel::Container ^components;
 	protected:
-		double a;
-		double b;
-		double c;
+		Double count;
+		Double result_value;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ go;
+	private: System::Windows::Forms::Button^ remainder;
+	private: System::Windows::Forms::Button^ cleaner;
+	private: System::Windows::Forms::Label^ label4;
+
+
+
 
 	private: System::Windows::Forms::Label^ BMI_result;
 #pragma region Windows Form Designer generated code
@@ -57,10 +62,7 @@ namespace NCalcuate {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(two_counts::typeid));
 			this->one_count = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->two_count = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->add = (gcnew System::Windows::Forms::Button());
 			this->subtract = (gcnew System::Windows::Forms::Button());
 			this->divide = (gcnew System::Windows::Forms::Button());
@@ -71,39 +73,25 @@ namespace NCalcuate {
 			this->BMI_result = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->go = (gcnew System::Windows::Forms::Button());
+			this->remainder = (gcnew System::Windows::Forms::Button());
+			this->cleaner = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// one_count
 			// 
 			resources->ApplyResources(this->one_count, L"one_count");
 			this->one_count->Name = L"one_count";
-			this->one_count->TextChanged += gcnew System::EventHandler(this, &two_counts::one_count_TextChanged);
 			// 
 			// label1
 			// 
 			resources->ApplyResources(this->label1, L"label1");
 			this->label1->Name = L"label1";
 			// 
-			// label2
-			// 
-			resources->ApplyResources(this->label2, L"label2");
-			this->label2->Name = L"label2";
-			// 
-			// two_count
-			// 
-			resources->ApplyResources(this->two_count, L"two_count");
-			this->two_count->Name = L"two_count";
-			this->two_count->TextChanged += gcnew System::EventHandler(this, &two_counts::two_count_TextChanged);
-			// 
 			// label3
 			// 
 			resources->ApplyResources(this->label3, L"label3");
 			this->label3->Name = L"label3";
-			// 
-			// label4
-			// 
-			resources->ApplyResources(this->label4, L"label4");
-			this->label4->Name = L"label4";
 			// 
 			// add
 			// 
@@ -190,11 +178,38 @@ namespace NCalcuate {
 			this->go->UseVisualStyleBackColor = false;
 			this->go->Click += gcnew System::EventHandler(this, &two_counts::go_cl);
 			// 
+			// remainder
+			// 
+			resources->ApplyResources(this->remainder, L"remainder");
+			this->remainder->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->remainder->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->remainder->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->remainder->Name = L"remainder";
+			this->remainder->UseVisualStyleBackColor = false;
+			this->remainder->Click += gcnew System::EventHandler(this, &two_counts::remainder_Click);
+			// 
+			// cleaner
+			// 
+			resources->ApplyResources(this->cleaner, L"cleaner");
+			this->cleaner->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->cleaner->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->cleaner->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->cleaner->Name = L"cleaner";
+			this->cleaner->UseVisualStyleBackColor = false;
+			this->cleaner->Click += gcnew System::EventHandler(this, &two_counts::cleaner_Click);
+			// 
+			// label4
+			// 
+			resources->ApplyResources(this->label4, L"label4");
+			this->label4->Name = L"label4";
+			// 
 			// two_counts
 			// 
 			resources->ApplyResources(this, L"$this");
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->Controls->Add(this->cleaner);
+			this->Controls->Add(this->remainder);
 			this->Controls->Add(this->go);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->BMI_result);
@@ -207,8 +222,6 @@ namespace NCalcuate {
 			this->Controls->Add(this->add);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->two_count);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->one_count);
 			this->MaximizeBox = false;
@@ -218,44 +231,159 @@ namespace NCalcuate {
 
 		}
 #pragma endregion
-
-private: System::Void one_count_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	a = Convert::ToDouble(one_count->Text);
-}
-
-private: System::Void two_count_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	b = Convert::ToDouble(two_count->Text);
-}
-
 private: System::Void add_cl(System::Object^ sender, System::EventArgs^ e) {
-	c = a + b;
-	this->result->Text = Convert::ToString(c);
+	count = Convert::ToDouble(one_count->Text);
+	if (String::IsNullOrEmpty(one_count->Text)) {
+		MessageBox::Show("Введите значения", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+	else {
+		if (result_value == 0) {
+			result_value = count;
+			one_count->Clear();
+		}
+
+		else {
+			result_value = result_value + count;
+			one_count->Clear();
+		}
+	}
+
+	this->result->Text = Convert::ToString(result_value);
 }
 private: System::Void subtract_cl(System::Object^ sender, System::EventArgs^ e) {
-	c = a - b;
-	this->result->Text = Convert::ToString(c);
+	count = Convert::ToDouble(one_count->Text);
+	if (String::IsNullOrEmpty(one_count->Text)) {
+		MessageBox::Show("Введите значения", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+	else {
+		if (result_value == 0) {
+			result_value = count;
+			one_count->Clear();
+		}
+
+		else {
+			result_value = result_value - count;
+			one_count->Clear();
+		}
+	}
+
+	this->result->Text = Convert::ToString(result_value);
 }
 private: System::Void multiply_cl(System::Object^ sender, System::EventArgs^ e) {
-	c = a * b;
-	this->result->Text = Convert::ToString(c);
+	count = Convert::ToDouble(one_count->Text);
+	if (String::IsNullOrEmpty(one_count->Text)) {
+		MessageBox::Show("Введите значения", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+	else {
+		if (result_value == 0) {
+			result_value = count;
+			one_count->Clear();
+		}
+
+		else {
+			result_value = result_value * count;
+			one_count->Clear();
+		}
+	}
+
+	this->result->Text = Convert::ToString(result_value);
 }
 private: System::Void divide_cl(System::Object^ sender, System::EventArgs^ e) {
-	c = a / b;
-	this->result->Text = Convert::ToString(c);
+	count = Convert::ToDouble(one_count->Text);
+	if (String::IsNullOrEmpty(one_count->Text)) {
+		MessageBox::Show("Введите значения", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+	else {
+		if (result_value == 0) {
+			result_value = count;
+			one_count->Clear();
+		}
+
+		else {
+			result_value = result_value / count;
+			one_count->Clear();
+		}
+	}
+
+	this->result->Text = Convert::ToString(result_value);
 }
 private: System::Void degree_cl(System::Object^ sender, System::EventArgs^ e) {
-	c = Math::Pow(a, b);
-	this->result->Text = Convert::ToString(c);
+	count = Convert::ToDouble(one_count->Text);
+	if (String::IsNullOrEmpty(one_count->Text)) {
+		MessageBox::Show("Введите значения", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+	else {
+		if (result_value == 0) {
+			result_value = count;
+			one_count->Clear();
+		}
+
+		else {
+			result_value = Math::Pow(result_value, count);
+			one_count->Clear();
+		}
+	}
+
+	this->result->Text = Convert::ToString(result_value);
 }
 
 private: System::Void arcctg_cl(System::Object^ sender, System::EventArgs^ e) {
-	c = Math::Atan2(a, b);
-	this->result->Text = Convert::ToString(c);
+	count = Convert::ToDouble(one_count->Text);
+	if (String::IsNullOrEmpty(one_count->Text)) {
+		MessageBox::Show("Введите значения", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+	else {
+		if (result_value == 0) {
+			result_value = count;
+			one_count->Clear();
+		}
+
+		else {
+			result_value = Math::Atan2(result_value, count);
+			one_count->Clear();
+		}
+	}
+
+	this->result->Text = Convert::ToString(result_value);
+}
+	   
+private: System::Void remainder_Click(System::Object^ sender, System::EventArgs^ e) {
+	count = Convert::ToDouble(one_count->Text);
+	if (String::IsNullOrEmpty(one_count->Text)) {
+		MessageBox::Show("Введите значения", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+
+	else {
+		if (result_value == 0) {
+			result_value = count;
+			one_count->Clear();
+		}
+
+		else {
+			result_value = Math::IEEERemainder(result_value, count);
+			one_count->Clear();
+		}
+	}
+
+	this->result->Text = Convert::ToString(result_value);
 }
 
 private: System::Void go_cl(System::Object^ sender, System::EventArgs^ e) {
 	onecount^ next = gcnew onecount();
 	next->Show();
+}
+
+private: System::Void cleaner_Click(System::Object^ sender, System::EventArgs^ e) {
+	result_value = 0;
+	count = 0;
+	one_count->Clear();
+	this->result->Text = Convert::ToString(result_value);
 }
 };
 }
